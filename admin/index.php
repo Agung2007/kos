@@ -10,7 +10,7 @@ require_once '../inc/db.php';
   <h2>Admin Dashboard</h2>
   <nav>
     <a href="rooms.php">Kelola Kamar</a> |
-    <a href="bookings.php">Kelola Booking</a> |
+    <a href="bokings.php">Kelola Booking</a> |
     <a href="../logout.php">Logout</a>
   </nav>
 </body></html>
