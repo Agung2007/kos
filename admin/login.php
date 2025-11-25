@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once __DIR__ . '/../inc/db.php'; // mysqli connection
+require_once __DIR__ . '/../inc/db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $name = $_POST['username']; // karena input name="username"
+    $name = $_POST['username']; 
     $password = $_POST['password'];
 
     // Query admin
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($admin && password_verify($password, $admin['password'])) {
 
         $_SESSION['user_id']  = $admin['id'];
-        $_SESSION['name']     = $admin['name'];   // pakai 'name'
+        $_SESSION['name']     = $admin['name'];   
         $_SESSION['role']     = $admin['role'];
 
         header("Location: index.php");
